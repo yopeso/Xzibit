@@ -15,6 +15,8 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     var imageURL: NSString?
     @IBOutlet weak var dragView: DragFileView!
     @IBOutlet weak var imageDragFile: DragFileView!
+    @IBOutlet weak var imageDragViewIcon: NSImageView!
+    @IBOutlet weak var projectDragViewIcon: NSImageView!
     
     let xcodeProjConstant = "xcodeproj"
     let pngConstant = "png"
@@ -25,7 +27,8 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         dragView.delegate = self
         imageDragFile.delegate = self;
         imageDragFile.type = pngConstant
-        
+        projectDragViewIcon.image = NSImage(named: "xcodeproject-inactive.png")
+        imageDragViewIcon.image = NSImage(named: "appIconGridScreenshots.png")
         // Do any additional setup after loading the view.
     }
     
@@ -38,13 +41,16 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         switch view.type {
         case xcodeProjConstant:
             let configuration = extractConfigFromProject(fileURL)
-            
+            projectDragViewIcon.image = NSImage(named: "xcodeproject.png")
             configurations = configuration.map { identifier -> Configuration in
                 return Configuration(configurationName: identifier)
             }
             tableView.reloadData();
         case pngConstant:
             imageURL = fileURL.path
+            imageDragViewIcon.image = NSImage(contentsOfFile: imageURL as! String)
+            imageDragViewIcon?.layer?.cornerRadius = 20.0
+
         default:
             break
         }

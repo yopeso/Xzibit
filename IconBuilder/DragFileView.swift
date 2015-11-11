@@ -60,7 +60,6 @@ class DragFileView: NSView {
     func commonInit() {
         wantsLayer = true
         setHighlight(false)
-        layer?.cornerRadius = 20.0
         registerForDraggedTypes([kUTTypeFileURL as String])
     }
     
@@ -77,9 +76,9 @@ class DragFileView: NSView {
     }
     func setHighlight(flag: Bool) {
         if flag {
-            layer?.backgroundColor = NSColor(calibratedRed: 0.56, green: 0.7, blue: 0.81, alpha: 1).CGColor
+            layer?.backgroundColor = NSColor(calibratedRed: 0.56, green: 0.7, blue: 0.81, alpha: 0.5).CGColor
         } else {
-            layer?.backgroundColor = NSColor(calibratedRed: 0.7, green: 0.85, blue: 1.0, alpha: 1).CGColor
+            layer?.backgroundColor = NSColor(calibratedRed: 0.7, green: 0.85, blue: 1.0, alpha: 0.5).CGColor
         }
     }
     

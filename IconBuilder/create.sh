@@ -25,7 +25,7 @@ removeTemp .fileName "$2" move
 }
 
 createFinal() {
-pointsize=$((220 * $5 / 1024))
+pointsize=$((200 * $5 / 1024))
 createTemp "                            " .ribbon $2 $3 transparent $5 $pointsize
 createTemp "$1" .labelText $2 transparent $4 $5 $pointsize
 
@@ -39,18 +39,17 @@ rm .ribbon.png
 resize() {
 /usr/local/bin/convert icon180.png -scale $1x$1 icon$1.png
 }
-open .
+mkdir $6/AppIcon-$2.appiconset
+cd $6/AppIcon-$2.appiconset/
 
 createFinal $2 $3 $4 $5 125
 
 /usr/local/bin/convert $1 -scale 180x180 .resized.png
 
-mkdir results
 /usr/local/bin/convert  .resized.png .watermark.png \
--gravity center   -composite   results/icon180.png
+-gravity center   -composite   icon180.png
 rm .resized.png
 rm .watermark.png
-cd results/
 resize 152
 resize 120
 resize 87

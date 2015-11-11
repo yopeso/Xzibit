@@ -673,16 +673,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="900" height="260"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mui-qF-OfR">
+                                <rect key="frame" x="20" y="70" width="120" height="120"/>
+                                <animations/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="z4y-eg-IUf"/>
+                            </imageView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="iU7-AZ-VRd" customClass="DragFileView" customModule="IconBuilder" customModuleProvider="target">
-                                <rect key="frame" x="20" y="60" width="120" height="140"/>
+                                <rect key="frame" x="20" y="70" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="2pg-rI-QCp"/>
-                                    <constraint firstAttribute="height" constant="140" id="M9n-PB-kQu"/>
+                                    <constraint firstAttribute="height" constant="120" id="M9n-PB-kQu"/>
                                 </constraints>
                                 <animations/>
                             </customView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="doV-de-9Jl">
-                                <rect key="frame" x="37" y="33" width="86" height="17"/>
+                                <rect key="frame" x="37" y="43" width="86" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add a Project" id="AuO-F4-c7p">
                                     <font key="font" metaFont="system"/>
@@ -691,13 +696,13 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVR-4i-eon">
-                                <rect key="frame" x="160" y="60" width="580" height="140"/>
+                                <rect key="frame" x="160" y="70" width="580" height="120"/>
                                 <clipView key="contentView" id="hnG-wI-BiR">
-                                    <rect key="frame" x="1" y="0.0" width="578" height="139"/>
+                                    <rect key="frame" x="1" y="0.0" width="578" height="119"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="aBv-gI-XH2" id="8t7-7w-c9E">
-                                            <rect key="frame" x="0.0" y="0.0" width="578" height="116"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="578" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -796,7 +801,7 @@
                                 </tableHeaderView>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U0v-d7-OYf">
-                                <rect key="frame" x="774" y="13" width="112" height="32"/>
+                                <rect key="frame" x="394" y="13" width="112" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tCt-QA-iY8"/>
                                 </constraints>
@@ -809,14 +814,28 @@
                                     </connections>
                                 </buttonCell>
                             </button>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bu7-kw-S8h">
+                                <rect key="frame" x="760" y="70" width="120" height="120"/>
+                                <animations/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="iCc-3l-lhb"/>
+                            </imageView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="bae-NR-olF" customClass="DragFileView" customModule="IconBuilder" customModuleProvider="target">
-                                <rect key="frame" x="760" y="60" width="120" height="140"/>
+                                <rect key="frame" x="760" y="70" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Qnz-OM-BLY"/>
-                                    <constraint firstAttribute="height" constant="140" id="c1A-NS-aEY"/>
+                                    <constraint firstAttribute="height" constant="120" id="c1A-NS-aEY"/>
                                 </constraints>
                                 <animations/>
                             </customView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="N6p-o8-aW1">
+                                <rect key="frame" x="782" y="33" width="76" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Add an Icon" id="Fa2-l7-pTZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="iU7-AZ-VRd" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="1Xv-ZM-EdB"/>
@@ -824,12 +843,22 @@
                             <constraint firstAttribute="bottom" secondItem="U0v-d7-OYf" secondAttribute="bottom" constant="20" id="4P4-KG-gbt"/>
                             <constraint firstItem="doV-de-9Jl" firstAttribute="centerX" secondItem="iU7-AZ-VRd" secondAttribute="centerX" id="5x3-Pe-nmG"/>
                             <constraint firstItem="bae-NR-olF" firstAttribute="leading" secondItem="cVR-4i-eon" secondAttribute="trailing" constant="20" id="6Sc-0N-pxp"/>
-                            <constraint firstAttribute="trailing" secondItem="U0v-d7-OYf" secondAttribute="trailing" constant="20" id="7rh-Zs-ZPd"/>
+                            <constraint firstItem="Mui-qF-OfR" firstAttribute="bottom" secondItem="iU7-AZ-VRd" secondAttribute="bottom" id="B90-HG-2h3"/>
                             <constraint firstItem="bae-NR-olF" firstAttribute="top" secondItem="iU7-AZ-VRd" secondAttribute="top" id="FMi-TI-s5Z"/>
                             <constraint firstItem="cVR-4i-eon" firstAttribute="top" secondItem="iU7-AZ-VRd" secondAttribute="top" id="FbI-qM-YaS"/>
+                            <constraint firstItem="bae-NR-olF" firstAttribute="leading" secondItem="bu7-kw-S8h" secondAttribute="leading" id="H2W-K2-NGo"/>
+                            <constraint firstItem="bae-NR-olF" firstAttribute="bottom" secondItem="bu7-kw-S8h" secondAttribute="bottom" id="HSs-7u-bVk"/>
+                            <constraint firstItem="Mui-qF-OfR" firstAttribute="trailing" secondItem="iU7-AZ-VRd" secondAttribute="trailing" id="Qca-1I-1Db"/>
+                            <constraint firstItem="bae-NR-olF" firstAttribute="trailing" secondItem="bu7-kw-S8h" secondAttribute="trailing" id="QnZ-74-eOc"/>
                             <constraint firstItem="doV-de-9Jl" firstAttribute="top" secondItem="iU7-AZ-VRd" secondAttribute="bottom" constant="10" id="TT7-d8-1wf"/>
+                            <constraint firstItem="Mui-qF-OfR" firstAttribute="leading" secondItem="iU7-AZ-VRd" secondAttribute="leading" id="bpZ-cS-wDo"/>
+                            <constraint firstItem="bae-NR-olF" firstAttribute="top" secondItem="bu7-kw-S8h" secondAttribute="top" id="gYw-07-sO2"/>
+                            <constraint firstItem="N6p-o8-aW1" firstAttribute="centerX" secondItem="bae-NR-olF" secondAttribute="centerX" id="gkA-M7-diI"/>
                             <constraint firstItem="cVR-4i-eon" firstAttribute="leading" secondItem="iU7-AZ-VRd" secondAttribute="trailing" constant="20" id="iIJ-3Q-Boc"/>
+                            <constraint firstItem="N6p-o8-aW1" firstAttribute="top" secondItem="bae-NR-olF" secondAttribute="bottom" constant="20" id="lNf-6t-SdV"/>
                             <constraint firstItem="iU7-AZ-VRd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="lU3-Nm-BsE"/>
+                            <constraint firstItem="Mui-qF-OfR" firstAttribute="top" secondItem="iU7-AZ-VRd" secondAttribute="top" id="mpv-nn-yct"/>
+                            <constraint firstItem="U0v-d7-OYf" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="r86-RH-2XZ"/>
                             <constraint firstAttribute="trailing" secondItem="bae-NR-olF" secondAttribute="trailing" constant="20" id="tU6-oB-o75"/>
                             <constraint firstItem="cVR-4i-eon" firstAttribute="bottom" secondItem="iU7-AZ-VRd" secondAttribute="bottom" id="v3A-1F-Y4Q"/>
                         </constraints>
@@ -838,6 +867,8 @@
                     <connections>
                         <outlet property="dragView" destination="iU7-AZ-VRd" id="fhd-WV-87I"/>
                         <outlet property="imageDragFile" destination="bae-NR-olF" id="zX3-bK-dUI"/>
+                        <outlet property="imageDragViewIcon" destination="bu7-kw-S8h" id="Rgg-GI-DKp"/>
+                        <outlet property="projectDragViewIcon" destination="Mui-qF-OfR" id="hok-O4-2Pm"/>
                         <outlet property="tableView" destination="8t7-7w-c9E" id="MEV-eR-LRu"/>
                     </connections>
                 </viewController>
