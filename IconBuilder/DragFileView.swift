@@ -10,12 +10,12 @@ import Foundation
 import Cocoa
 
 protocol DragViewResponseDelegate {
-    func didFetchConfiguration(let configuration: Array<String>);
+    func didFetchURL(view: DragFileView, fileURL: NSURL);
 }
 
 extension NSString {
-    class func projectBundleTypeIdentifier() -> String {
-        return preferredTypeIdentifierForFileExtension("xcodeproj")
+    class func projectBundleTypeIdentifier(type: String) -> String {
+        return preferredTypeIdentifierForFileExtension(type)
     }
     
     class func preferredTypeIdentifierForFileExtension(string: String) -> String {
@@ -24,18 +24,18 @@ extension NSString {
 }
 
 extension NSPasteboard {
-    func canReadXcodeProjectFileURL() -> Bool {
+    func canReadXcodeProjectFileURL(type: String) -> Bool {
         let classArray : Array<AnyClass> = [NSURL.self]
 
         return canReadObjectForClasses(classArray, options: [NSPasteboardURLReadingFileURLsOnlyKey: NSNumber(bool: true),
-            NSPasteboardURLReadingContentsConformToTypesKey: [NSString.projectBundleTypeIdentifier()]])
+            NSPasteboardURLReadingContentsConformToTypesKey: [NSString.projectBundleTypeIdentifier(type)]])
     }
     
-    func readXcodeProjectFileURL() -> NSURL {
+    func readXcodeProjectFileURL(type: String) -> NSURL {
         let classArray : Array<AnyClass> = [NSURL.self]
 
         let objects = readObjectsForClasses(classArray, options: [NSPasteboardURLReadingFileURLsOnlyKey: true,
-            NSPasteboardURLReadingContentsConformToTypesKey: [NSString.projectBundleTypeIdentifier()]])
+            NSPasteboardURLReadingContentsConformToTypesKey: [NSString.projectBundleTypeIdentifier(type)]])
         
         return objects?.first as! NSURL
         
@@ -45,7 +45,7 @@ extension NSPasteboard {
 class DragFileView: NSView {
     var fileURL: NSURL?
     var delegate: DragViewResponseDelegate?
-    
+    var type = "xcodeproj"
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         commonInit()
@@ -66,7 +66,7 @@ class DragFileView: NSView {
     
     
     override func draggingEntered(sender: NSDraggingInfo) -> NSDragOperation {
-        let canRead = sender.draggingPasteboard().canReadXcodeProjectFileURL()
+        let canRead = sender.draggingPasteboard().canReadXcodeProjectFileURL(type)
         if canRead {
             setHighlight(true)
             return .Generic
@@ -90,12 +90,12 @@ class DragFileView: NSView {
     
     
     override func prepareForDragOperation(sender: NSDraggingInfo) -> Bool {
-        return sender.draggingPasteboard().canReadXcodeProjectFileURL()
+        return sender.draggingPasteboard().canReadXcodeProjectFileURL(type)
     }
     
     
     override func performDragOperation(sender: NSDraggingInfo) -> Bool {
-        fileURL = sender.draggingPasteboard().readXcodeProjectFileURL()
+        fileURL = sender.draggingPasteboard().readXcodeProjectFileURL(type)
         
         return fileURL != nil
     }
@@ -104,9 +104,7 @@ class DragFileView: NSView {
     override func concludeDragOperation(sender: NSDraggingInfo?) {
         setHighlight(false)
         if let fileURL = fileURL {
-            let array = extractConfigFromProject(fileURL)
-            
-            delegate?.didFetchConfiguration(array)
+            delegate?.didFetchURL(self, fileURL: fileURL)
         }
     }
 }

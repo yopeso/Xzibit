@@ -16,7 +16,8 @@
 		75F8712B1BF2795200DE4C75 /* ProjectConfigExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */; };
 		75F8712D1BF2853E00DE4C75 /* DragFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712C1BF2853E00DE4C75 /* DragFileView.swift */; };
 		75F8712F1BF34BC800DE4C75 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712E1BF34BC800DE4C75 /* Configuration.swift */; };
-		75F871311BF38F8200DE4C75 /* create.sh in Resources */ = {isa = PBXBuildFile; fileRef = 75F871301BF38F8100DE4C75 /* create.sh */; };
+		75F871381BF39D5600DE4C75 /* create.sh in Resources */ = {isa = PBXBuildFile; fileRef = 75F871371BF39D5600DE4C75 /* create.sh */; };
+		75F8713A1BF3C44700DE4C75 /* IconsCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F871391BF3C44700DE4C75 /* IconsCreator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,8 @@
 		75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigExtractor.swift; sourceTree = "<group>"; };
 		75F8712C1BF2853E00DE4C75 /* DragFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragFileView.swift; sourceTree = "<group>"; };
 		75F8712E1BF34BC800DE4C75 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		75F871301BF38F8100DE4C75 /* create.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = create.sh; sourceTree = "<group>"; };
+		75F871371BF39D5600DE4C75 /* create.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = create.sh; sourceTree = "<group>"; };
+		75F871391BF3C44700DE4C75 /* IconsCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsCreator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +108,10 @@
 				75F870FF1BF26AA400DE4C75 /* AppDelegate.swift */,
 				75F871011BF26AA400DE4C75 /* ViewController.swift */,
 				75F8712E1BF34BC800DE4C75 /* Configuration.swift */,
-				75F871301BF38F8100DE4C75 /* create.sh */,
 				75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */,
 				75F8712C1BF2853E00DE4C75 /* DragFileView.swift */,
+				75F871391BF3C44700DE4C75 /* IconsCreator.swift */,
+				75F871371BF39D5600DE4C75 /* create.sh */,
 				75F871031BF26AA400DE4C75 /* Assets.xcassets */,
 				75F871051BF26AA400DE4C75 /* Main.storyboard */,
 				75F871081BF26AA400DE4C75 /* Info.plist */,
@@ -144,6 +147,7 @@
 				75F870F81BF26AA400DE4C75 /* Sources */,
 				75F870F91BF26AA400DE4C75 /* Frameworks */,
 				75F870FA1BF26AA400DE4C75 /* Resources */,
+				75F871321BF3915600DE4C75 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -238,8 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F871311BF38F8200DE4C75 /* create.sh in Resources */,
 				75F871041BF26AA400DE4C75 /* Assets.xcassets in Resources */,
+				75F871381BF39D5600DE4C75 /* create.sh in Resources */,
 				75F871071BF26AA400DE4C75 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,6 +264,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		75F871321BF3915600DE4C75 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "removeTemp() {\n    convert -page +$move-$move \\\n    $1.png \\\n    -background none \\\n    -flatten \\\n    $2.png\n    rm $1.png\n}\n\n\ncreateTemp() {\n    move=$((185*$6/1024))\n    convert -background transparent \\\n    -undercolor $4 \\\n    -fill $5 \\\n    -font /Library/Fonts/\"$3\".ttf \\\n    -size $6x$6 \\\n    -rotate 45 \\\n    -pointsize $7 \\\n    -gravity North \\\n    label:\"$1\" \\\n    .fileName.png\n    removeTemp .fileName \"$2\" move\n}\n\ncreateFinal() {\n    pointsize=$((150 * $5 / 1024))\n    createTemp \"                            \" .ribbon $2 $3 transparent $5 $pointsize\n    createTemp \"$1\" .labelText $2 transparent $4 $5 $pointsize\n    \n    convert  .ribbon.png .labelText.png \\\n    -gravity center   -composite   ~/Desktop/$1.png\n    rm .labelText.png\n    rm .ribbon.png\n    \n}\n\ncreateFinal Beta Arial red blue 150";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		75F870F81BF26AA400DE4C75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -270,6 +290,7 @@
 				75F871001BF26AA400DE4C75 /* AppDelegate.swift in Sources */,
 				75F8712D1BF2853E00DE4C75 /* DragFileView.swift in Sources */,
 				75F8712B1BF2795200DE4C75 /* ProjectConfigExtractor.swift in Sources */,
+				75F8713A1BF3C44700DE4C75 /* IconsCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

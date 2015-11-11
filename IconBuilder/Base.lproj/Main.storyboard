@@ -670,7 +670,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="IconBuilder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="738" height="259"/>
+                        <rect key="frame" x="0.0" y="0.0" width="900" height="260"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="iU7-AZ-VRd" customClass="DragFileView" customModule="IconBuilder" customModuleProvider="target">
@@ -691,13 +691,13 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cVR-4i-eon">
-                                <rect key="frame" x="160" y="60" width="558" height="140"/>
+                                <rect key="frame" x="160" y="60" width="580" height="140"/>
                                 <clipView key="contentView" id="hnG-wI-BiR">
-                                    <rect key="frame" x="1" y="0.0" width="556" height="139"/>
+                                    <rect key="frame" x="1" y="0.0" width="578" height="139"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="aBv-gI-XH2" id="8t7-7w-c9E">
-                                            <rect key="frame" x="0.0" y="0.0" width="556" height="116"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="578" height="116"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                             <size key="intercellSpacing" width="3" height="2"/>
@@ -755,7 +755,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                 </tableColumn>
-                                                <tableColumn identifier="textC" width="108" minWidth="40" maxWidth="1000" id="XPC-0K-ShN">
+                                                <tableColumn identifier="textC" width="130" minWidth="40" maxWidth="1000" id="XPC-0K-ShN">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Text Color">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -790,13 +790,13 @@
                                     <animations/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="aBv-gI-XH2">
-                                    <rect key="frame" x="0.0" y="0.0" width="556" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="578" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableHeaderView>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="U0v-d7-OYf">
-                                <rect key="frame" x="612" y="13" width="112" height="32"/>
+                                <rect key="frame" x="774" y="13" width="112" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="tCt-QA-iY8"/>
                                 </constraints>
@@ -809,29 +809,41 @@
                                     </connections>
                                 </buttonCell>
                             </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="bae-NR-olF" customClass="DragFileView" customModule="IconBuilder" customModuleProvider="target">
+                                <rect key="frame" x="760" y="60" width="120" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Qnz-OM-BLY"/>
+                                    <constraint firstAttribute="height" constant="140" id="c1A-NS-aEY"/>
+                                </constraints>
+                                <animations/>
+                            </customView>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="iU7-AZ-VRd" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="1Xv-ZM-EdB"/>
+                            <constraint firstItem="bae-NR-olF" firstAttribute="bottom" secondItem="iU7-AZ-VRd" secondAttribute="bottom" id="1yw-5r-0pz"/>
                             <constraint firstAttribute="bottom" secondItem="U0v-d7-OYf" secondAttribute="bottom" constant="20" id="4P4-KG-gbt"/>
                             <constraint firstItem="doV-de-9Jl" firstAttribute="centerX" secondItem="iU7-AZ-VRd" secondAttribute="centerX" id="5x3-Pe-nmG"/>
+                            <constraint firstItem="bae-NR-olF" firstAttribute="leading" secondItem="cVR-4i-eon" secondAttribute="trailing" constant="20" id="6Sc-0N-pxp"/>
                             <constraint firstAttribute="trailing" secondItem="U0v-d7-OYf" secondAttribute="trailing" constant="20" id="7rh-Zs-ZPd"/>
+                            <constraint firstItem="bae-NR-olF" firstAttribute="top" secondItem="iU7-AZ-VRd" secondAttribute="top" id="FMi-TI-s5Z"/>
                             <constraint firstItem="cVR-4i-eon" firstAttribute="top" secondItem="iU7-AZ-VRd" secondAttribute="top" id="FbI-qM-YaS"/>
                             <constraint firstItem="doV-de-9Jl" firstAttribute="top" secondItem="iU7-AZ-VRd" secondAttribute="bottom" constant="10" id="TT7-d8-1wf"/>
-                            <constraint firstItem="iU7-AZ-VRd" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="X8a-c2-HZY"/>
                             <constraint firstItem="cVR-4i-eon" firstAttribute="leading" secondItem="iU7-AZ-VRd" secondAttribute="trailing" constant="20" id="iIJ-3Q-Boc"/>
                             <constraint firstItem="iU7-AZ-VRd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="lU3-Nm-BsE"/>
-                            <constraint firstAttribute="trailing" secondItem="cVR-4i-eon" secondAttribute="trailing" constant="20" id="rVC-BG-Rsr"/>
+                            <constraint firstAttribute="trailing" secondItem="bae-NR-olF" secondAttribute="trailing" constant="20" id="tU6-oB-o75"/>
                             <constraint firstItem="cVR-4i-eon" firstAttribute="bottom" secondItem="iU7-AZ-VRd" secondAttribute="bottom" id="v3A-1F-Y4Q"/>
                         </constraints>
                         <animations/>
                     </view>
                     <connections>
                         <outlet property="dragView" destination="iU7-AZ-VRd" id="fhd-WV-87I"/>
+                        <outlet property="imageDragFile" destination="bae-NR-olF" id="zX3-bK-dUI"/>
                         <outlet property="tableView" destination="8t7-7w-c9E" id="MEV-eR-LRu"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="635.5"/>
+            <point key="canvasLocation" x="164" y="715"/>
         </scene>
     </scenes>
 </document>

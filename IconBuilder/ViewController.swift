@@ -12,43 +12,42 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     
     @IBOutlet weak var tableView: NSTableView!
     var configurations: Array<Configuration>?
+    var imageURL: NSString?
     @IBOutlet weak var dragView: DragFileView!
+    @IBOutlet weak var imageDragFile: DragFileView!
+    
+    let xcodeProjConstant = "xcodeproj"
+    let pngConstant = "png"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dragView.type = xcodeProjConstant
         dragView.delegate = self
+        imageDragFile.delegate = self;
+        imageDragFile.type = pngConstant
+        
         // Do any additional setup after loading the view.
     }
     
-    override var representedObject: AnyObject? {
-        didSet {
-            // Update the view, if already loaded.
-        }
-    }
-    
     @IBAction func run(sender: AnyObject) {
-        let path = NSBundle.mainBundle().pathForResource("create", ofType: "sh")
-        let task = NSTask()
-        task.launchPath = "/bin/sh"
-        let newpath = path! + " Beta Arial red blue 150"
-        let arguments = [newpath]
-        task.arguments = arguments
-        let pipe = NSPipe()
-        task.standardOutput = pipe
-        let file = pipe.fileHandleForReading
-        task.launch()
-        let data = file.readDataToEndOfFile()
-        let string = String(data: data, encoding:NSUTF8StringEncoding)
-        print(string)
+        IconsCreator().createImages(configurations!, imagepath: imageURL as! String)
     }
     
-    func didFetchConfiguration(configuration: Array<String>) {
-        
-        configurations = configuration.map { identifier -> Configuration in
-            return Configuration(configurationName: identifier)
+    
+    func didFetchURL(view: DragFileView, fileURL: NSURL) {
+        switch view.type {
+        case xcodeProjConstant:
+            let configuration = extractConfigFromProject(fileURL)
+            
+            configurations = configuration.map { identifier -> Configuration in
+                return Configuration(configurationName: identifier)
+            }
+            tableView.reloadData();
+        case pngConstant:
+            imageURL = fileURL.path
+        default:
+            break
         }
-        
-        tableView.reloadData();
     }
     
     
