@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75F871001BF26AA400DE4C75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F870FF1BF26AA400DE4C75 /* AppDelegate.swift */; };
+		75F871021BF26AA400DE4C75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F871011BF26AA400DE4C75 /* ViewController.swift */; };
+		75F871041BF26AA400DE4C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F871031BF26AA400DE4C75 /* Assets.xcassets */; };
+		75F871071BF26AA400DE4C75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F871051BF26AA400DE4C75 /* Main.storyboard */; };
+		75F871121BF26AA400DE4C75 /* IconBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */; };
+		75F8711D1BF26AA400DE4C75 /* IconBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8711C1BF26AA400DE4C75 /* IconBuilderUITests.swift */; };
+		75F8712B1BF2795200DE4C75 /* ProjectConfigExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */; };
+		75F8712D1BF2853E00DE4C75 /* DragFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712C1BF2853E00DE4C75 /* DragFileView.swift */; };
+		75F8712F1BF34BC800DE4C75 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712E1BF34BC800DE4C75 /* Configuration.swift */; };
+		75F871311BF38F8200DE4C75 /* create.sh in Resources */ = {isa = PBXBuildFile; fileRef = 75F871301BF38F8100DE4C75 /* create.sh */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		75F8710E1BF26AA400DE4C75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75F870F41BF26AA400DE4C75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75F870FB1BF26AA400DE4C75;
+			remoteInfo = IconBuilder;
+		};
+		75F871191BF26AA400DE4C75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 75F870F41BF26AA400DE4C75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75F870FB1BF26AA400DE4C75;
+			remoteInfo = IconBuilder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		75F870FC1BF26AA400DE4C75 /* IconBuilder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IconBuilder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F870FF1BF26AA400DE4C75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		75F871011BF26AA400DE4C75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75F871031BF26AA400DE4C75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75F871061BF26AA400DE4C75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		75F871081BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F8710D1BF26AA400DE4C75 /* IconBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IconBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBuilderTests.swift; sourceTree = "<group>"; };
+		75F871131BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F871181BF26AA400DE4C75 /* IconBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IconBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F8711C1BF26AA400DE4C75 /* IconBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBuilderUITests.swift; sourceTree = "<group>"; };
+		75F8711E1BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigExtractor.swift; sourceTree = "<group>"; };
+		75F8712C1BF2853E00DE4C75 /* DragFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragFileView.swift; sourceTree = "<group>"; };
+		75F8712E1BF34BC800DE4C75 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		75F871301BF38F8100DE4C75 /* create.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = create.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75F870F91BF26AA400DE4C75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F8710A1BF26AA400DE4C75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F871151BF26AA400DE4C75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75F870F31BF26AA400DE4C75 = {
+			isa = PBXGroup;
+			children = (
+				75F870FE1BF26AA400DE4C75 /* IconBuilder */,
+				75F871101BF26AA400DE4C75 /* IconBuilderTests */,
+				75F8711B1BF26AA400DE4C75 /* IconBuilderUITests */,
+				75F870FD1BF26AA400DE4C75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		75F870FD1BF26AA400DE4C75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75F870FC1BF26AA400DE4C75 /* IconBuilder.app */,
+				75F8710D1BF26AA400DE4C75 /* IconBuilderTests.xctest */,
+				75F871181BF26AA400DE4C75 /* IconBuilderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75F870FE1BF26AA400DE4C75 /* IconBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				75F870FF1BF26AA400DE4C75 /* AppDelegate.swift */,
+				75F871011BF26AA400DE4C75 /* ViewController.swift */,
+				75F8712E1BF34BC800DE4C75 /* Configuration.swift */,
+				75F871301BF38F8100DE4C75 /* create.sh */,
+				75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */,
+				75F8712C1BF2853E00DE4C75 /* DragFileView.swift */,
+				75F871031BF26AA400DE4C75 /* Assets.xcassets */,
+				75F871051BF26AA400DE4C75 /* Main.storyboard */,
+				75F871081BF26AA400DE4C75 /* Info.plist */,
+			);
+			path = IconBuilder;
+			sourceTree = "<group>";
+		};
+		75F871101BF26AA400DE4C75 /* IconBuilderTests */ = {
+			isa = PBXGroup;
+			children = (
+				75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */,
+				75F871131BF26AA400DE4C75 /* Info.plist */,
+			);
+			path = IconBuilderTests;
+			sourceTree = "<group>";
+		};
+		75F8711B1BF26AA400DE4C75 /* IconBuilderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				75F8711C1BF26AA400DE4C75 /* IconBuilderUITests.swift */,
+				75F8711E1BF26AA400DE4C75 /* Info.plist */,
+			);
+			path = IconBuilderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75F870FB1BF26AA400DE4C75 /* IconBuilder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F871211BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilder" */;
+			buildPhases = (
+				75F870F81BF26AA400DE4C75 /* Sources */,
+				75F870F91BF26AA400DE4C75 /* Frameworks */,
+				75F870FA1BF26AA400DE4C75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IconBuilder;
+			productName = IconBuilder;
+			productReference = 75F870FC1BF26AA400DE4C75 /* IconBuilder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		75F8710C1BF26AA400DE4C75 /* IconBuilderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F871241BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilderTests" */;
+			buildPhases = (
+				75F871091BF26AA400DE4C75 /* Sources */,
+				75F8710A1BF26AA400DE4C75 /* Frameworks */,
+				75F8710B1BF26AA400DE4C75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75F8710F1BF26AA400DE4C75 /* PBXTargetDependency */,
+			);
+			name = IconBuilderTests;
+			productName = IconBuilderTests;
+			productReference = 75F8710D1BF26AA400DE4C75 /* IconBuilderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		75F871171BF26AA400DE4C75 /* IconBuilderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F871271BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilderUITests" */;
+			buildPhases = (
+				75F871141BF26AA400DE4C75 /* Sources */,
+				75F871151BF26AA400DE4C75 /* Frameworks */,
+				75F871161BF26AA400DE4C75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				75F8711A1BF26AA400DE4C75 /* PBXTargetDependency */,
+			);
+			name = IconBuilderUITests;
+			productName = IconBuilderUITests;
+			productReference = 75F871181BF26AA400DE4C75 /* IconBuilderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75F870F41BF26AA400DE4C75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Andrei Vidrasco";
+				TargetAttributes = {
+					75F870FB1BF26AA400DE4C75 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					75F8710C1BF26AA400DE4C75 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 75F870FB1BF26AA400DE4C75;
+					};
+					75F871171BF26AA400DE4C75 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 75F870FB1BF26AA400DE4C75;
+					};
+				};
+			};
+			buildConfigurationList = 75F870F71BF26AA400DE4C75 /* Build configuration list for PBXProject "IconBuilder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 75F870F31BF26AA400DE4C75;
+			productRefGroup = 75F870FD1BF26AA400DE4C75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75F870FB1BF26AA400DE4C75 /* IconBuilder */,
+				75F8710C1BF26AA400DE4C75 /* IconBuilderTests */,
+				75F871171BF26AA400DE4C75 /* IconBuilderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75F870FA1BF26AA400DE4C75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F871311BF38F8200DE4C75 /* create.sh in Resources */,
+				75F871041BF26AA400DE4C75 /* Assets.xcassets in Resources */,
+				75F871071BF26AA400DE4C75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F8710B1BF26AA400DE4C75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F871161BF26AA400DE4C75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75F870F81BF26AA400DE4C75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F871021BF26AA400DE4C75 /* ViewController.swift in Sources */,
+				75F8712F1BF34BC800DE4C75 /* Configuration.swift in Sources */,
+				75F871001BF26AA400DE4C75 /* AppDelegate.swift in Sources */,
+				75F8712D1BF2853E00DE4C75 /* DragFileView.swift in Sources */,
+				75F8712B1BF2795200DE4C75 /* ProjectConfigExtractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F871091BF26AA400DE4C75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F871121BF26AA400DE4C75 /* IconBuilderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75F871141BF26AA400DE4C75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F8711D1BF26AA400DE4C75 /* IconBuilderUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		75F8710F1BF26AA400DE4C75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75F870FB1BF26AA400DE4C75 /* IconBuilder */;
+			targetProxy = 75F8710E1BF26AA400DE4C75 /* PBXContainerItemProxy */;
+		};
+		75F8711A1BF26AA400DE4C75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75F870FB1BF26AA400DE4C75 /* IconBuilder */;
+			targetProxy = 75F871191BF26AA400DE4C75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		75F871051BF26AA400DE4C75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75F871061BF26AA400DE4C75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75F8711F1BF26AA400DE4C75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		75F871201BF26AA400DE4C75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		75F871221BF26AA400DE4C75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = IconBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yopeso.IconBuilder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		75F871231BF26AA400DE4C75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = IconBuilder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yopeso.IconBuilder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		75F871251BF26AA400DE4C75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = IconBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yopeso.IconBuilderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IconBuilder.app/Contents/MacOS/IconBuilder";
+			};
+			name = Debug;
+		};
+		75F871261BF26AA400DE4C75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = IconBuilderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yopeso.IconBuilderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IconBuilder.app/Contents/MacOS/IconBuilder";
+			};
+			name = Release;
+		};
+		75F871281BF26AA400DE4C75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = IconBuilderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yopeso.IconBuilderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IconBuilder;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		75F871291BF26AA400DE4C75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = IconBuilderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yopeso.IconBuilderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = IconBuilder;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75F870F71BF26AA400DE4C75 /* Build configuration list for PBXProject "IconBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F8711F1BF26AA400DE4C75 /* Debug */,
+				75F871201BF26AA400DE4C75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75F871211BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F871221BF26AA400DE4C75 /* Debug */,
+				75F871231BF26AA400DE4C75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75F871241BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F871251BF26AA400DE4C75 /* Debug */,
+				75F871261BF26AA400DE4C75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75F871271BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F871281BF26AA400DE4C75 /* Debug */,
+				75F871291BF26AA400DE4C75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75F870F41BF26AA400DE4C75 /* Project object */;
+}
