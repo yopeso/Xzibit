@@ -10,6 +10,8 @@ import Foundation
 
 class IconsCreator {
     var resultsPath: String = ""
+    var projectPath: NSString = ""
+    
     func createContectJsonInEachAppIconset(resultsPath: String) {
         do {
             let contents = try NSFileManager.defaultManager().subpathsOfDirectoryAtPath(resultsPath)
@@ -26,11 +28,61 @@ class IconsCreator {
             
         }
     }
-    func closure(task: NSTask) {
-        self.createContectJsonInEachAppIconset(resultsPath)
+    
+    
+    func extractImageAssetsPathFromPbxprojURL(pbxprojURL: NSString) -> String? {
+        let xcodeProjURL = pbxprojURL.stringByDeletingLastPathComponent as NSString
+        let projectFolderURL = xcodeProjURL.stringByDeletingLastPathComponent
+        let dirFiles = NSFileManager.defaultManager().subpathsAtPath(projectFolderURL)! as Array
+        
+        let assetsFiles = dirFiles.filter {
+            return $0.hasSuffix(".xcassets")
+        }
+        if assetsFiles.count > 0 {
+            return projectFolderURL + "/" + assetsFiles.first!
+        } else {
+            return nil
+        }
     }
     
-    func createImages(list: Array<Configuration>, imagepath: String) {
+    
+    func moveContentOfResultsFolderToAssets() {
+        do {
+            let contents = try NSFileManager.defaultManager().contentsOfDirectoryAtPath(resultsPath)
+            let projectAssetsPath = extractImageAssetsPathFromPbxprojURL(projectPath)
+            if let projectAssetsPath = projectAssetsPath {
+                for content in contents {
+                    let fullPath = resultsPath + "/" + content
+                    let newPath = projectAssetsPath + "/" + content
+                    try NSFileManager.defaultManager().moveItemAtPath(fullPath, toPath: newPath)
+                }
+            }
+        } catch {
+            
+        }
+    }
+    
+    
+    func deleteTemporaryFolder() {
+        do {
+            try NSFileManager.defaultManager().removeItemAtPath(resultsPath)
+        } catch {
+            
+        }
+    }
+    
+    func closure(task: NSTask) {
+        createContectJsonInEachAppIconset(resultsPath)
+        moveContentOfResultsFolderToAssets()
+        print(resultsPath)
+        deleteTemporaryFolder()
+    }
+    
+    
+    
+    
+    func createImages(list: Array<Configuration>, imagepath: String, projectURL: String) {
+        projectPath = projectURL as NSString
         let shURL = NSBundle.mainBundle().URLForResource("create", withExtension: "sh")
         let shPath = shURL?.URLByDeletingLastPathComponent?.path
         resultsPath = shPath! + "/results"
@@ -40,7 +92,9 @@ class IconsCreator {
         } catch {
             
         }
-        for config in list {
+        
+        for index in 0..<list.count {
+            let config = list[index]
             if !config.enable {
                 config.ribbonColor = "transparent"
                 config.textColor = "transparent"
@@ -48,14 +102,13 @@ class IconsCreator {
             let task = NSTask()
             task.launchPath = "/bin/sh"
             task.arguments = [NSBundle.mainBundle().pathForResource("create", ofType: "sh")!, imagepath, config.title, "Arial", config.ribbonColor, config.textColor, resultsPath]
-            task.terminationHandler = closure
+            if index == list.count - 1 {
+                task.terminationHandler = self.closure
+            }
             task.launch()
         }
-        let task = NSTask()
-        task.launchPath = "/usr/bin/open"
-        task.arguments = [resultsPath]
-        task.terminationHandler = closure
-        task.launch()
+        PBXProjEditor().appendConfigurationNameForAllAppIconSet(projectURL, list: list)
+        
     }
     
 }

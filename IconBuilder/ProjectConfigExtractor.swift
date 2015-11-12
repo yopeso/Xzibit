@@ -24,7 +24,7 @@ func buildSettingsByConfigurationForConfigurations(let configurations: Array<Dic
 }
 
 
-func extractConfigFromProject(projectWrapperURL: NSURL) -> Array<String> {
+func extractConfigFromProject(projectWrapperURL: NSURL) -> (Array<String>, String) {
     let projectFileURL = projectWrapperURL.URLByAppendingPathComponent("project.pbxproj")
     let fileData = NSData(contentsOfURL: projectFileURL)
     if let fileData = fileData {
@@ -43,7 +43,7 @@ func extractConfigFromProject(projectWrapperURL: NSURL) -> Array<String> {
                         
                         let projectBuildConfiguration = getArrayWithConfigutations(identifiers, source: objects as! NSDictionary)
                         
-                        return buildSettingsByConfigurationForConfigurations(projectBuildConfiguration)
+                        return (buildSettingsByConfigurationForConfigurations(projectBuildConfiguration), projectFileURL.path!)
                     }
                 }
             }
@@ -52,5 +52,5 @@ func extractConfigFromProject(projectWrapperURL: NSURL) -> Array<String> {
         }
     }
     
-    return []
+    return ([], "")
 }

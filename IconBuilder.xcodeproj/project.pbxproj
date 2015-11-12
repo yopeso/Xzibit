@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		753DC1241BF4CE5400DA756C /* PBXProjEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */; };
 		759D24991BF3D82E008530A3 /* xcodeproject-inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D24981BF3D82E008530A3 /* xcodeproject-inactive.png */; };
 		759D249B1BF3D917008530A3 /* appIconGridScreenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D249A1BF3D917008530A3 /* appIconGridScreenshots.png */; };
 		75A86F7D1BF3D79C002AD9A8 /* xcodeproject.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A86F7C1BF3D79C002AD9A8 /* xcodeproject.png */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjEditor.swift; sourceTree = "<group>"; };
 		759D24981BF3D82E008530A3 /* xcodeproject-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xcodeproject-inactive.png"; sourceTree = "<group>"; };
 		759D249A1BF3D917008530A3 /* appIconGridScreenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIconGridScreenshots.png; sourceTree = "<group>"; };
 		75A86F7C1BF3D79C002AD9A8 /* xcodeproject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xcodeproject.png; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */,
 				75F8712C1BF2853E00DE4C75 /* DragFileView.swift */,
 				75F871391BF3C44700DE4C75 /* IconsCreator.swift */,
+				753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */,
 				75F8713B1BF3CAEA00DE4C75 /* Contents.json */,
 				75F871371BF39D5600DE4C75 /* create.sh */,
 				75F871031BF26AA400DE4C75 /* Assets.xcassets */,
@@ -306,6 +309,7 @@
 				75F871001BF26AA400DE4C75 /* AppDelegate.swift in Sources */,
 				75F8712D1BF2853E00DE4C75 /* DragFileView.swift in Sources */,
 				75F8712B1BF2795200DE4C75 /* ProjectConfigExtractor.swift in Sources */,
+				753DC1241BF4CE5400DA756C /* PBXProjEditor.swift in Sources */,
 				75F8713A1BF3C44700DE4C75 /* IconsCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,7 +12,8 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     
     @IBOutlet weak var tableView: NSTableView!
     var configurations: Array<Configuration>?
-    var imageURL: NSString?
+    var imageURL: String?
+    var projectURL: String?
     @IBOutlet weak var dragView: DragFileView!
     @IBOutlet weak var imageDragFile: DragFileView!
     @IBOutlet weak var imageDragViewIcon: NSImageView!
@@ -20,7 +21,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     
     let xcodeProjConstant = "xcodeproj"
     let pngConstant = "png"
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         dragView.type = xcodeProjConstant
@@ -33,14 +34,15 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     @IBAction func run(sender: AnyObject) {
-        IconsCreator().createImages(configurations!, imagepath: imageURL as! String)
+        IconsCreator().createImages(configurations!, imagepath: imageURL!, projectURL: projectURL!)
     }
     
     
     func didFetchURL(view: DragFileView, fileURL: NSURL) {
         switch view.type {
         case xcodeProjConstant:
-            let configuration = extractConfigFromProject(fileURL)
+            let (configuration, url) = extractConfigFromProject(fileURL)
+            projectURL = url
             projectDragViewIcon.image = NSImage(named: "xcodeproject.png")
             configurations = configuration.map { identifier -> Configuration in
                 return Configuration(configurationName: identifier)
@@ -48,7 +50,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
             tableView.reloadData();
         case pngConstant:
             imageURL = fileURL.path
-            imageDragViewIcon.image = NSImage(contentsOfFile: imageURL as! String)
+            imageDragViewIcon.image = NSImage(contentsOfFile: imageURL!)
             imageDragViewIcon?.layer?.cornerRadius = 20.0
 
         default:
