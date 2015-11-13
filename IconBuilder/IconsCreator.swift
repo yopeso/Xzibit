@@ -54,7 +54,11 @@ class IconsCreator {
                 for content in contents {
                     let fullPath = resultsPath + "/" + content
                     let newPath = projectAssetsPath + "/" + content
+                    do {
                     try NSFileManager.defaultManager().removeItemAtPath(newPath)
+                    } catch {
+                        
+                    }
                     try NSFileManager.defaultManager().moveItemAtPath(fullPath, toPath: newPath)
                 }
             }
@@ -75,7 +79,6 @@ class IconsCreator {
     func closure(task: NSTask) {
         createContectJsonInEachAppIconset(resultsPath)
         moveContentOfResultsFolderToAssets()
-        print(resultsPath)
         deleteTemporaryFolder()
     }
     
@@ -87,7 +90,6 @@ class IconsCreator {
         let shURL = NSBundle.mainBundle().URLForResource("create", withExtension: "sh")
         let shPath = shURL?.URLByDeletingLastPathComponent?.path
         resultsPath = shPath! + "/results"
-        print(shPath)
         do {
             try NSFileManager.defaultManager().createDirectoryAtPath(resultsPath, withIntermediateDirectories: true, attributes: nil)
         } catch {
@@ -102,7 +104,6 @@ class IconsCreator {
             }
             let task = NSTask()
             task.launchPath = "/bin/sh"
-            print(imagepath)
             task.arguments = [NSBundle.mainBundle().pathForResource("create", ofType: "sh")!, imagepath, config.title, "Arial", config.ribbonColor, config.textColor, resultsPath]
             if index == list.count - 1 {
                 task.terminationHandler = self.closure

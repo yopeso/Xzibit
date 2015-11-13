@@ -9,6 +9,17 @@
 import Foundation
 
 class PBXProjEditor {
+    func iconSetNameForConfigName(configName: String, list: Array<Configuration>) -> String {
+        let filter = list.filter {
+            return $0.configurationName == configName
+        }
+        if let first = filter.first {
+            return first.title
+        } else {
+            return ""
+        }
+    }
+    
     func appendConfigurationNameForAllAppIconSet(projectURL: String, list: Array<Configuration>) {
         let fileData = NSData(contentsOfFile:projectURL)
         if let fileData = fileData {
@@ -34,7 +45,7 @@ class PBXProjEditor {
                                                 let config = objects[buildConfiguration]!
                                                 let  buildSettings = config!["buildSettings"] as! NSMutableDictionary
                                                 let name = config!["name"] as! String
-                                                buildSettings["ASSETCATALOG_COMPILER_APPICON_NAME"] = "AppIcon-" + name
+                                                buildSettings["ASSETCATALOG_COMPILER_APPICON_NAME"] = "AppIcon-" + self.iconSetNameForConfigName(name, list: list)
                                             }
                                         }
                                     }
