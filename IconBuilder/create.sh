@@ -39,12 +39,12 @@ rm .ribbon.png
 resize() {
 /usr/local/bin/convert icon180.png -scale $1x$1 icon$1.png
 }
-mkdir $6/AppIcon-$2.appiconset
-cd $6/AppIcon-$2.appiconset/
+mkdir "$6/AppIcon-$2.appiconset"
+cd "$6/AppIcon-$2.appiconset/"
 
 createFinal $2 $3 $4 $5 125
 
-/usr/local/bin/convert $1 -scale 180x180 .resized.png
+/usr/local/bin/convert "$1" -scale 180x180 .resized.png
 
 /usr/local/bin/convert  .resized.png .watermark.png \
 -gravity center   -composite   icon180.png

@@ -54,6 +54,7 @@ class IconsCreator {
                 for content in contents {
                     let fullPath = resultsPath + "/" + content
                     let newPath = projectAssetsPath + "/" + content
+                    try NSFileManager.defaultManager().removeItemAtPath(newPath)
                     try NSFileManager.defaultManager().moveItemAtPath(fullPath, toPath: newPath)
                 }
             }
@@ -101,6 +102,7 @@ class IconsCreator {
             }
             let task = NSTask()
             task.launchPath = "/bin/sh"
+            print(imagepath)
             task.arguments = [NSBundle.mainBundle().pathForResource("create", ofType: "sh")!, imagepath, config.title, "Arial", config.ribbonColor, config.textColor, resultsPath]
             if index == list.count - 1 {
                 task.terminationHandler = self.closure
