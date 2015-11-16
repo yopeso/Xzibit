@@ -8,6 +8,44 @@
 
 import Foundation
 
+
+
+
+func extractConfigFromProject(projectWrapperURL: NSURL) -> (Array<String>, String) {
+    let pbxProjURL = projectWrapperURL.URLByAppendingPathComponent("project.pbxproj")
+    guard let fileData = NSData(contentsOfURL: pbxProjURL), pbxProjPath = pbxProjURL.path else { return ([], "") }
+    do {
+        let projectPlist = try NSPropertyListSerialization.propertyListWithData(fileData, options:.Immutable, format: nil)
+        return (configurationsFromPlist(projectPlist), pbxProjPath)
+    } catch {
+        return ([], "")
+    }
+}
+
+
+func configurationsFromPlist(projectPlist: AnyObject) -> Array<String> {
+    if let
+        objects = projectPlist.objectForKey("objects"),
+        rootObjectKey = projectPlist["rootObject"] as? String,
+        rootObject = objects.objectForKey(rootObjectKey),
+        buildConfigurationListID = rootObject["buildConfigurationList"] as? String
+    {
+           return configurationsFromDictionary(objects, buildConfigurationListID: buildConfigurationListID)
+    }
+    
+    return []
+}
+
+
+func configurationsFromDictionary(objects: AnyObject, buildConfigurationListID: String) -> Array<String> {
+    let buildConfigurationList = objects[buildConfigurationListID]
+    let identifiers = buildConfigurationList!!["buildConfigurations"] as! Array<String>
+    let projectBuildConfiguration = getArrayWithConfigutations(identifiers, source: objects as! NSDictionary)
+    
+    return buildSettingsByConfigurationForConfigurations(projectBuildConfiguration)
+}
+
+
 func getArrayWithConfigutations(let identifiers: Array<String>, source: NSDictionary) -> Array<Dictionary<String, AnyObject>> {
     let filtered = identifiers.map { identifier -> Dictionary<String, AnyObject> in
         return source[identifier] as! Dictionary<String, AnyObject>
@@ -21,36 +59,4 @@ func buildSettingsByConfigurationForConfigurations(let configurations: Array<Dic
     return configurations.map({ (projectBuildConfiguration: [String : AnyObject]) -> String in
         return projectBuildConfiguration["name"] as! String
     })
-}
-
-
-func extractConfigFromProject(projectWrapperURL: NSURL) -> (Array<String>, String) {
-    let projectFileURL = projectWrapperURL.URLByAppendingPathComponent("project.pbxproj")
-    let fileData = NSData(contentsOfURL: projectFileURL)
-    if let fileData = fileData {
-        do {
-            
-            let projectPlist = try NSPropertyListSerialization.propertyListWithData(fileData, options:.Immutable, format: nil)
-            let objects = projectPlist.objectForKey("objects")
-            if let objects = objects {
-                let rootObjectKey = projectPlist["rootObject"] as? String
-                if let rootObjectKey = rootObjectKey {
-                    let rootObject = objects.objectForKey(rootObjectKey)
-                    let buildConfigurationListID = rootObject?["buildConfigurationList"] as? String
-                    if let buildConfigurationListID = buildConfigurationListID {
-                        let buildConfigurationList = objects[buildConfigurationListID]
-                        let identifiers = buildConfigurationList!!["buildConfigurations"] as! Array<String>
-                        
-                        let projectBuildConfiguration = getArrayWithConfigutations(identifiers, source: objects as! NSDictionary)
-                        
-                        return (buildSettingsByConfigurationForConfigurations(projectBuildConfiguration), projectFileURL.path!)
-                    }
-                }
-            }
-        } catch {
-            
-        }
-    }
-    
-    return ([], "")
 }
