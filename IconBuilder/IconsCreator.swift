@@ -55,7 +55,7 @@ class IconsCreator {
                     let fullPath = resultsPath + "/" + content
                     let newPath = projectAssetsPath + "/" + content
                     do {
-                    try NSFileManager.defaultManager().removeItemAtPath(newPath)
+                        try NSFileManager.defaultManager().removeItemAtPath(newPath)
                     } catch {
                         
                     }
@@ -83,8 +83,6 @@ class IconsCreator {
     }
     
     
-    
-    
     func createImages(list: Array<Configuration>, imagepath: String, projectURL: String) {
         projectPath = projectURL as NSString
         let shURL = NSBundle.mainBundle().URLForResource("create", withExtension: "sh")
@@ -104,7 +102,7 @@ class IconsCreator {
             }
             let task = NSTask()
             task.launchPath = "/bin/sh"
-            task.arguments = [NSBundle.mainBundle().pathForResource("create", ofType: "sh")!, imagepath, config.title, config.ribbonColor, config.textColor, resultsPath, NSBundle.mainBundle().pathForResource("convert", ofType: "")!]
+            task.arguments = [NSBundle.mainBundle().pathForResource("create", ofType: "sh")!, imagepath, config.title, config.ribbonColor, config.textColor, resultsPath]
             if index == list.count - 1 {
                 task.terminationHandler = self.closure
             }
