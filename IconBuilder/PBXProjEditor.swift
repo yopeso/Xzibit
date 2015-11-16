@@ -24,7 +24,7 @@ class PBXProjEditor {
         let fileData = NSData(contentsOfFile:projectURL)
         if let fileData = fileData {
             do {
-                
+                // This needs to be refactored. See ProjectConfigExtractor for an example.
                 let projectPlist = try NSPropertyListSerialization.propertyListWithData(fileData, options:.Immutable, format: nil)
                 let plist = projectPlist
                     let objects = projectPlist.objectForKey("objects")

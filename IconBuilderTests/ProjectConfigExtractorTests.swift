@@ -14,7 +14,7 @@ class ProjectConfigExtractorTests: XCTestCase {
     func testIfConfigExtractorCanFindPbxProjInsideXcodeProj() {
         guard let pathOfxcodeProj = pathOfFileWithName("SchemaTestProject") else { return }
         let (_, pathOfpbxproj) = extractConfigFromProject(NSURL(fileURLWithPath: pathOfxcodeProj))
-        XCTAssertTrue(pathOfxcodeProj + "/project.pbxproj" == pathOfpbxproj)
+        XCTAssertTrue(pathOfpbxproj == pathOfxcodeProj + "/project.pbxproj")
     }
     
     

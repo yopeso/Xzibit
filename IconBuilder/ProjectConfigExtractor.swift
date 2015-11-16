@@ -9,8 +9,6 @@
 import Foundation
 
 
-
-
 func extractConfigFromProject(projectWrapperURL: NSURL) -> (Array<String>, String) {
     let pbxProjURL = projectWrapperURL.URLByAppendingPathComponent("project.pbxproj")
     guard let fileData = NSData(contentsOfURL: pbxProjURL), pbxProjPath = pbxProjURL.path else { return ([], "") }
