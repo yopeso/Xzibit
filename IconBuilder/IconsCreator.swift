@@ -104,7 +104,7 @@ class IconsCreator {
             }
             let task = NSTask()
             task.launchPath = "/bin/sh"
-            task.arguments = [NSBundle.mainBundle().pathForResource("create", ofType: "sh")!, imagepath, config.title, "Arial", config.ribbonColor, config.textColor, resultsPath]
+            task.arguments = [NSBundle.mainBundle().pathForResource("create", ofType: "sh")!, imagepath, config.title, config.ribbonColor, config.textColor, resultsPath, NSBundle.mainBundle().pathForResource("convert", ofType: "")!]
             if index == list.count - 1 {
                 task.terminationHandler = self.closure
             }
