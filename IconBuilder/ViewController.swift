@@ -34,7 +34,23 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     
     @IBAction func run(sender: AnyObject) {
-        IconsCreator().createImages(configurations!, imagepath: imageURL!, projectURL: projectURL!)
+        if let
+            configurations = configurations,
+            imageURL = imageURL,
+            projectURL = projectURL
+        {
+            IconsCreator().createImages(configurations, imagepath: imageURL, projectURL: projectURL)
+        } else {
+            showAlertViewThatAtLeastOneParameterWasNotAdded()
+        }
+    }
+    
+    
+    func showAlertViewThatAtLeastOneParameterWasNotAdded() {
+        let alert = NSAlert()
+        alert.messageText = "The project or the app icon was not added"
+        alert.addButtonWithTitle("Ok")
+        alert.runModal()
     }
     
     
