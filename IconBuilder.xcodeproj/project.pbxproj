@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0DB7A7751BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */; };
-		0DB7A7E81BF9E8A30069CDD1 /* file.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DB7A7E71BF9E8A30069CDD1 /* file.png */; };
 		0DB7A8261BF9E9F30069CDD1 /* SchemaTestProject.bin in Resources */ = {isa = PBXBuildFile; fileRef = 0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */; };
 		753DC1241BF4CE5400DA756C /* PBXProjEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */; };
 		759D24991BF3D82E008530A3 /* xcodeproject-inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D24981BF3D82E008530A3 /* xcodeproject-inactive.png */; };
@@ -39,7 +38,6 @@
 
 /* Begin PBXFileReference section */
 		0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigExtractorTests.swift; sourceTree = "<group>"; };
-		0DB7A7E71BF9E8A30069CDD1 /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file.png; sourceTree = "<group>"; };
 		0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = SchemaTestProject.bin; sourceTree = "<group>"; };
 		753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjEditor.swift; sourceTree = "<group>"; };
 		759D24981BF3D82E008530A3 /* xcodeproject-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xcodeproject-inactive.png"; sourceTree = "<group>"; };
@@ -85,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */,
-				0DB7A7E71BF9E8A30069CDD1 /* file.png */,
 				0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */,
 			);
 			name = ConfigExtractorTests;
@@ -247,7 +244,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DB7A8261BF9E9F30069CDD1 /* SchemaTestProject.bin in Resources */,
-				0DB7A7E81BF9E8A30069CDD1 /* file.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
