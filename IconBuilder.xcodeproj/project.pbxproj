@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DB7A7751BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */; };
+		0DB7A7E81BF9E8A30069CDD1 /* file.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DB7A7E71BF9E8A30069CDD1 /* file.png */; };
+		0DB7A8261BF9E9F30069CDD1 /* SchemaTestProject.bin in Resources */ = {isa = PBXBuildFile; fileRef = 0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */; };
 		753DC1241BF4CE5400DA756C /* PBXProjEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */; };
 		759D24991BF3D82E008530A3 /* xcodeproject-inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D24981BF3D82E008530A3 /* xcodeproject-inactive.png */; };
 		759D249B1BF3D917008530A3 /* appIconGridScreenshots.png in Resources */ = {isa = PBXBuildFile; fileRef = 759D249A1BF3D917008530A3 /* appIconGridScreenshots.png */; };
@@ -16,7 +19,6 @@
 		75F871041BF26AA400DE4C75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F871031BF26AA400DE4C75 /* Assets.xcassets */; };
 		75F871071BF26AA400DE4C75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75F871051BF26AA400DE4C75 /* Main.storyboard */; };
 		75F871121BF26AA400DE4C75 /* IconBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */; };
-		75F8711D1BF26AA400DE4C75 /* IconBuilderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8711C1BF26AA400DE4C75 /* IconBuilderUITests.swift */; };
 		75F8712B1BF2795200DE4C75 /* ProjectConfigExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */; };
 		75F8712D1BF2853E00DE4C75 /* DragFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712C1BF2853E00DE4C75 /* DragFileView.swift */; };
 		75F8712F1BF34BC800DE4C75 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712E1BF34BC800DE4C75 /* Configuration.swift */; };
@@ -33,16 +35,12 @@
 			remoteGlobalIDString = 75F870FB1BF26AA400DE4C75;
 			remoteInfo = IconBuilder;
 		};
-		75F871191BF26AA400DE4C75 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 75F870F41BF26AA400DE4C75 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 75F870FB1BF26AA400DE4C75;
-			remoteInfo = IconBuilder;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigExtractorTests.swift; sourceTree = "<group>"; };
+		0DB7A7E71BF9E8A30069CDD1 /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = file.png; sourceTree = "<group>"; };
+		0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = SchemaTestProject.bin; sourceTree = "<group>"; };
 		753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjEditor.swift; sourceTree = "<group>"; };
 		759D24981BF3D82E008530A3 /* xcodeproject-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xcodeproject-inactive.png"; sourceTree = "<group>"; };
 		759D249A1BF3D917008530A3 /* appIconGridScreenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIconGridScreenshots.png; sourceTree = "<group>"; };
@@ -56,8 +54,6 @@
 		75F8710D1BF26AA400DE4C75 /* IconBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IconBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBuilderTests.swift; sourceTree = "<group>"; };
 		75F871131BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75F871181BF26AA400DE4C75 /* IconBuilderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IconBuilderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		75F8711C1BF26AA400DE4C75 /* IconBuilderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBuilderUITests.swift; sourceTree = "<group>"; };
 		75F8711E1BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigExtractor.swift; sourceTree = "<group>"; };
 		75F8712C1BF2853E00DE4C75 /* DragFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragFileView.swift; sourceTree = "<group>"; };
@@ -82,16 +78,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75F871151BF26AA400DE4C75 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DB7A7761BF9E4190069CDD1 /* ConfigExtractorTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */,
+				0DB7A7E71BF9E8A30069CDD1 /* file.png */,
+				0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */,
+			);
+			name = ConfigExtractorTests;
+			sourceTree = "<group>";
+		};
 		75F870F31BF26AA400DE4C75 = {
 			isa = PBXGroup;
 			children = (
@@ -107,7 +106,6 @@
 			children = (
 				75F870FC1BF26AA400DE4C75 /* IconBuilder.app */,
 				75F8710D1BF26AA400DE4C75 /* IconBuilderTests.xctest */,
-				75F871181BF26AA400DE4C75 /* IconBuilderUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +137,7 @@
 			children = (
 				75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */,
 				75F871131BF26AA400DE4C75 /* Info.plist */,
+				0DB7A7761BF9E4190069CDD1 /* ConfigExtractorTests */,
 			);
 			path = IconBuilderTests;
 			sourceTree = "<group>";
@@ -146,7 +145,6 @@
 		75F8711B1BF26AA400DE4C75 /* IconBuilderUITests */ = {
 			isa = PBXGroup;
 			children = (
-				75F8711C1BF26AA400DE4C75 /* IconBuilderUITests.swift */,
 				75F8711E1BF26AA400DE4C75 /* Info.plist */,
 			);
 			path = IconBuilderUITests;
@@ -191,24 +189,6 @@
 			productReference = 75F8710D1BF26AA400DE4C75 /* IconBuilderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		75F871171BF26AA400DE4C75 /* IconBuilderUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 75F871271BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilderUITests" */;
-			buildPhases = (
-				75F871141BF26AA400DE4C75 /* Sources */,
-				75F871151BF26AA400DE4C75 /* Frameworks */,
-				75F871161BF26AA400DE4C75 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				75F8711A1BF26AA400DE4C75 /* PBXTargetDependency */,
-			);
-			name = IconBuilderUITests;
-			productName = IconBuilderUITests;
-			productReference = 75F871181BF26AA400DE4C75 /* IconBuilderUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -223,10 +203,6 @@
 						CreatedOnToolsVersion = 7.1;
 					};
 					75F8710C1BF26AA400DE4C75 = {
-						CreatedOnToolsVersion = 7.1;
-						TestTargetID = 75F870FB1BF26AA400DE4C75;
-					};
-					75F871171BF26AA400DE4C75 = {
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = 75F870FB1BF26AA400DE4C75;
 					};
@@ -247,7 +223,6 @@
 			targets = (
 				75F870FB1BF26AA400DE4C75 /* IconBuilder */,
 				75F8710C1BF26AA400DE4C75 /* IconBuilderTests */,
-				75F871171BF26AA400DE4C75 /* IconBuilderUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -271,13 +246,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75F871161BF26AA400DE4C75 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				0DB7A8261BF9E9F30069CDD1 /* SchemaTestProject.bin in Resources */,
+				0DB7A7E81BF9E8A30069CDD1 /* file.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,15 +288,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB7A7751BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift in Sources */,
 				75F871121BF26AA400DE4C75 /* IconBuilderTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		75F871141BF26AA400DE4C75 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75F8711D1BF26AA400DE4C75 /* IconBuilderUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,11 +300,6 @@
 			isa = PBXTargetDependency;
 			target = 75F870FB1BF26AA400DE4C75 /* IconBuilder */;
 			targetProxy = 75F8710E1BF26AA400DE4C75 /* PBXContainerItemProxy */;
-		};
-		75F8711A1BF26AA400DE4C75 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 75F870FB1BF26AA400DE4C75 /* IconBuilder */;
-			targetProxy = 75F871191BF26AA400DE4C75 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -487,32 +445,6 @@
 			};
 			name = Release;
 		};
-		75F871281BF26AA400DE4C75 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = IconBuilderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yopeso.IconBuilderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = IconBuilder;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		75F871291BF26AA400DE4C75 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = IconBuilderUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yopeso.IconBuilderUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = IconBuilder;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -539,15 +471,6 @@
 			buildConfigurations = (
 				75F871251BF26AA400DE4C75 /* Debug */,
 				75F871261BF26AA400DE4C75 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		75F871271BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilderUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				75F871281BF26AA400DE4C75 /* Debug */,
-				75F871291BF26AA400DE4C75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
