@@ -1,49 +1,60 @@
-#sh create.sh ~/Desktop/AppIcon.png Release Red Blue .
-
-createFolders() {
-mkdir "$1/AppIcon-$2.appiconset"
-cd "$1/AppIcon-$2.appiconset/"
+#sh create.sh Beta Arial red blue
+removeTemp() {
+/usr/local/bin/convert -page +$move-$move \
+$1.png \
+-background none \
+-flatten \
+$2.png
+rm $1.png
 }
 
-resizeImage() {
-/usr/local/bin/convert $1 -scale $2x$2 $3.png
-}
-
-resizeIcon() {
-resizeImage icon180.png $1 icon$1
-}
-
-createSmallIcons() {
-resizeIcon 152
-resizeIcon 120
-resizeIcon 87
-resizeIcon 80
-resizeIcon 76
-resizeIcon 58
-resizeIcon 40
-resizeIcon 29
-}
 
 createTemp() {
-/usr/local/bin/convert -background transparent -undercolor $3 -fill $4 -font /Library/Fonts/Arial.ttf -size 125x125 -rotate 45 -pointsize 20 -gravity North label:"$1" .fileName.png
-/usr/local/bin/convert -page +22-17 .fileName.png -background none -flatten $2.png
-rm .fileName.png
+move=$((185*$6/1024))
+/usr/local/bin/convert -background transparent \
+-undercolor $4 \
+-fill $5 \
+-font /Library/Fonts/"$3".ttf \
+-size $6x$6 \
+-rotate 45 \
+-pointsize $7 \
+-gravity North \
+label:"$1" \
+.fileName.png
+removeTemp .fileName "$2" move
 }
 
-combine() {
-/usr/local/bin/convert  $1.png $2.png -gravity center   -composite   $3.png
-rm $1.png
-rm $2.png
+createFinal() {
+pointsize=$((200 * $5 / 1024))
+createTemp "                            " .ribbon $2 $3 transparent $5 $pointsize
+createTemp "$1" .labelText $2 transparent $4 $5 $pointsize
+
+/usr/local/bin/convert  .ribbon.png .labelText.png \
+-gravity center   -composite   .watermark.png
+rm .labelText.png
+rm .ribbon.png
 }
 
-createWatermark() {
-createTemp "                                                         " .ribbon $2 transparent
-createTemp "$1" .labelText transparent $3
-combine .ribbon .labelText .watermark
-}
 
-createFolders $5 $2
-createWatermark $2 $3 $4
-resizeImage $1 180 .resized
-combine .resized .watermark icon180
-createSmallIcons
+resize() {
+/usr/local/bin/convert icon180.png -scale $1x$1 icon$1.png
+}
+mkdir "$6/AppIcon-$2.appiconset"
+cd "$6/AppIcon-$2.appiconset/"
+
+createFinal $2 $3 $4 $5 125
+
+/usr/local/bin/convert "$1" -scale 180x180 .resized.png
+
+/usr/local/bin/convert  .resized.png .watermark.png \
+-gravity center   -composite   icon180.png
+rm .resized.png
+rm .watermark.png
+resize 152
+resize 120
+resize 87
+resize 80
+resize 76
+resize 58
+resize 40
+resize 29

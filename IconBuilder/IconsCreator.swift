@@ -9,6 +9,7 @@
 import Foundation
 
 class IconsCreator {
+    static var task: NSTask?
     var resultsPath: String = ""
     var projectPath: NSString = ""
     
@@ -20,7 +21,7 @@ class IconsCreator {
                     continue
                 }
                 let fileName = "Contents.json"
-                let fullPathToFile = NSBundle.mainBundle().pathForResource(fileName, ofType: "")!
+                let fullPathToFile = NSBundle.mainBundle().resourcePath! + "/Contents.json"
                 let newPath = "\(resultsPath)/\(content)/\(fileName)"
                 try NSFileManager.defaultManager().copyItemAtPath(fullPathToFile, toPath:  newPath)
             }
@@ -31,6 +32,7 @@ class IconsCreator {
     
     
     func extractImageAssetsPathFromPbxprojURL(pbxprojURL: NSString) -> String? {
+        print("Got here")
         let xcodeProjURL = pbxprojURL.stringByDeletingLastPathComponent as NSString
         let projectFolderURL = xcodeProjURL.stringByDeletingLastPathComponent
         let dirFiles = NSFileManager.defaultManager().subpathsAtPath(projectFolderURL)! as Array
@@ -63,6 +65,7 @@ class IconsCreator {
                 }
             }
         } catch {
+            print("bla")
             
         }
     }
@@ -76,16 +79,24 @@ class IconsCreator {
         }
     }
     
-    func closure(task: NSTask) {
+    func wrapUpEverything() {
         createContectJsonInEachAppIconset(resultsPath)
         moveContentOfResultsFolderToAssets()
         deleteTemporaryFolder()
     }
     
+    func createSHPath() -> String {
+        return NSBundle.mainBundle().resourcePath! + "/create.sh"
+    }
+    
+    func createSHURL() -> NSURL? {
+        return NSURL(fileURLWithPath: createSHPath())
+    }
+    
     
     func createImages(list: Array<Configuration>, imagepath: String, projectURL: String) {
         projectPath = projectURL as NSString
-        let shURL = NSBundle.mainBundle().URLForResource("create", withExtension: "sh")
+        let shURL = createSHURL()
         let shPath = shURL?.URLByDeletingLastPathComponent?.path
         resultsPath = shPath! + "/results"
         do {
@@ -102,13 +113,13 @@ class IconsCreator {
             }
             let task = NSTask()
             task.launchPath = "/bin/sh"
-            task.arguments = [NSBundle.mainBundle().pathForResource("create", ofType: "sh")!, imagepath, config.title, config.ribbonColor, config.textColor, resultsPath]
-            if index == list.count - 1 {
-                task.terminationHandler = self.closure
-            }
+            task.arguments = [createSHPath(), imagepath, config.title, "Arial", config.ribbonColor, config.textColor, resultsPath]
+            
             task.launch()
+            task.waitUntilExit()
         }
         PBXProjEditor().appendConfigurationNameForAllAppIconSet(projectURL, list: list)
+        wrapUpEverything()
         
     }
     
