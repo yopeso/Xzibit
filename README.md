@@ -2,6 +2,7 @@
 
 ##Command line tool
 You use the command line tool in two easy steps:
+
 1. Generate the configuration file for your project
 ```sh
 ./Xzibit init pathToYourProject.xcodeproj
