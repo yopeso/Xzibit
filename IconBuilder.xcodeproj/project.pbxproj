@@ -16,6 +16,10 @@
 		0D74B1DC1BFE8B74006D6903 /* create.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F871371BF39D5600DE4C75 /* create.sh */; };
 		0D74B1DE1BFE8B8D006D6903 /* Contents.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F8713B1BF3CAEA00DE4C75 /* Contents.json */; };
 		0D74B1DF1BFE8B8D006D6903 /* create.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F871371BF39D5600DE4C75 /* create.sh */; };
+		0D74B1E31BFE8FB4006D6903 /* YamlDefaultInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74B1E21BFE8FB4006D6903 /* YamlDefaultInitializer.swift */; };
+		0D74B1E51BFE9096006D6903 /* YamlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74B1E41BFE9096006D6903 /* YamlHandler.swift */; };
+		0D74B1E61BFE90D0006D6903 /* YamlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74B1E41BFE9096006D6903 /* YamlHandler.swift */; };
+		0D74B1E81BFE9B8E006D6903 /* testConfiguration.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0D74B1E71BFE9B8E006D6903 /* testConfiguration.yaml */; };
 		0DB7A7751BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */; };
 		0DB7A8261BF9E9F30069CDD1 /* SchemaTestProject.bin in Resources */ = {isa = PBXBuildFile; fileRef = 0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */; };
 		753DC1241BF4CE5400DA756C /* PBXProjEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */; };
@@ -73,6 +77,9 @@
 /* Begin PBXFileReference section */
 		0D74B1D01BFE8AFD006D6903 /* XZibit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XZibit; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D74B1D21BFE8AFD006D6903 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0D74B1E21BFE8FB4006D6903 /* YamlDefaultInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamlDefaultInitializer.swift; sourceTree = "<group>"; };
+		0D74B1E41BFE9096006D6903 /* YamlHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamlHandler.swift; sourceTree = "<group>"; };
+		0D74B1E71BFE9B8E006D6903 /* testConfiguration.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testConfiguration.yaml; sourceTree = "<group>"; };
 		0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigExtractorTests.swift; sourceTree = "<group>"; };
 		0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = SchemaTestProject.bin; sourceTree = "<group>"; };
 		753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PBXProjEditor.swift; path = ../IconBuilder/PBXProjEditor.swift; sourceTree = "<group>"; };
@@ -133,6 +140,7 @@
 				75F8713B1BF3CAEA00DE4C75 /* Contents.json */,
 				75F871371BF39D5600DE4C75 /* create.sh */,
 				0D74B1D21BFE8AFD006D6903 /* main.swift */,
+				0D74B1E41BFE9096006D6903 /* YamlHandler.swift */,
 			);
 			path = XZibit;
 			sourceTree = "<group>";
@@ -186,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */,
+				0D74B1E71BFE9B8E006D6903 /* testConfiguration.yaml */,
+				0D74B1E21BFE8FB4006D6903 /* YamlDefaultInitializer.swift */,
 				75F871131BF26AA400DE4C75 /* Info.plist */,
 				0DB7A7761BF9E4190069CDD1 /* ConfigExtractorTests */,
 			);
@@ -318,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DB7A8261BF9E9F30069CDD1 /* SchemaTestProject.bin in Resources */,
+				0D74B1E81BFE9B8E006D6903 /* testConfiguration.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D74B1D71BFE8B2E006D6903 /* Configuration.swift in Sources */,
+				0D74B1E51BFE9096006D6903 /* YamlHandler.swift in Sources */,
 				0D74B1D91BFE8B2E006D6903 /* IconsCreator.swift in Sources */,
 				0D74B1D31BFE8AFD006D6903 /* main.swift in Sources */,
 				0D74B1D81BFE8B2E006D6903 /* ProjectConfigExtractor.swift in Sources */,
@@ -345,6 +357,7 @@
 				75F871001BF26AA400DE4C75 /* AppDelegate.swift in Sources */,
 				75F8712D1BF2853E00DE4C75 /* DragFileView.swift in Sources */,
 				75F8712B1BF2795200DE4C75 /* ProjectConfigExtractor.swift in Sources */,
+				0D74B1E61BFE90D0006D6903 /* YamlHandler.swift in Sources */,
 				753DC1241BF4CE5400DA756C /* PBXProjEditor.swift in Sources */,
 				75F8713A1BF3C44700DE4C75 /* IconsCreator.swift in Sources */,
 			);
@@ -354,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D74B1E31BFE8FB4006D6903 /* YamlDefaultInitializer.swift in Sources */,
 				0DB7A7751BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift in Sources */,
 				75F871121BF26AA400DE4C75 /* IconBuilderTests.swift in Sources */,
 			);

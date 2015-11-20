@@ -32,7 +32,6 @@ class IconsCreator {
     
     
     func extractImageAssetsPathFromPbxprojURL(pbxprojURL: NSString) -> String? {
-        print("Got here")
         let xcodeProjURL = pbxprojURL.stringByDeletingLastPathComponent as NSString
         let projectFolderURL = xcodeProjURL.stringByDeletingLastPathComponent
         let dirFiles = NSFileManager.defaultManager().subpathsAtPath(projectFolderURL)! as Array
@@ -106,7 +105,7 @@ class IconsCreator {
         }
         
         for index in 0..<list.count {
-            let config = list[index]
+            var config = list[index]
             if !config.enable {
                 config.ribbonColor = "transparent"
                 config.textColor = "transparent"

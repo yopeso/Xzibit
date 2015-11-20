@@ -117,7 +117,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         return nil
     }
     func tableView(tableView: NSTableView, setObjectValue object: AnyObject?, forTableColumn tableColumn: NSTableColumn?, row: Int) {
-        let config = configurations![row]
+        var config = configurations![row]
         if let identifier = tableColumn?.identifier {
             switch identifier {
             case "enable":
