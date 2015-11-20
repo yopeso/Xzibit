@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D74B1D31BFE8AFD006D6903 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74B1D21BFE8AFD006D6903 /* main.swift */; };
+		0D74B1D71BFE8B2E006D6903 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712E1BF34BC800DE4C75 /* Configuration.swift */; };
+		0D74B1D81BFE8B2E006D6903 /* ProjectConfigExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */; };
+		0D74B1D91BFE8B2E006D6903 /* IconsCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F871391BF3C44700DE4C75 /* IconsCreator.swift */; };
+		0D74B1DA1BFE8B2E006D6903 /* PBXProjEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */; };
+		0D74B1DB1BFE8B74006D6903 /* Contents.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F8713B1BF3CAEA00DE4C75 /* Contents.json */; };
+		0D74B1DC1BFE8B74006D6903 /* create.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F871371BF39D5600DE4C75 /* create.sh */; };
+		0D74B1DE1BFE8B8D006D6903 /* Contents.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F8713B1BF3CAEA00DE4C75 /* Contents.json */; };
+		0D74B1DF1BFE8B8D006D6903 /* create.sh in CopyFiles */ = {isa = PBXBuildFile; fileRef = 75F871371BF39D5600DE4C75 /* create.sh */; };
+		0D74B1E31BFE8FB4006D6903 /* YamlDefaultInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74B1E21BFE8FB4006D6903 /* YamlDefaultInitializer.swift */; };
+		0D74B1E51BFE9096006D6903 /* YamlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74B1E41BFE9096006D6903 /* YamlHandler.swift */; };
+		0D74B1E61BFE90D0006D6903 /* YamlHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D74B1E41BFE9096006D6903 /* YamlHandler.swift */; };
+		0D74B1E81BFE9B8E006D6903 /* testConfiguration.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 0D74B1E71BFE9B8E006D6903 /* testConfiguration.yaml */; };
 		0DB7A7751BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */; };
 		0DB7A8261BF9E9F30069CDD1 /* SchemaTestProject.bin in Resources */ = {isa = PBXBuildFile; fileRef = 0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */; };
 		753DC1241BF4CE5400DA756C /* PBXProjEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */; };
@@ -36,10 +49,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0D74B1CE1BFE8AFD006D6903 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				0D74B1DB1BFE8B74006D6903 /* Contents.json in CopyFiles */,
+				0D74B1DC1BFE8B74006D6903 /* create.sh in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D74B1DD1BFE8B87006D6903 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				0D74B1DE1BFE8B8D006D6903 /* Contents.json in CopyFiles */,
+				0D74B1DF1BFE8B8D006D6903 /* create.sh in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		0D74B1D01BFE8AFD006D6903 /* XZibit */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XZibit; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D74B1D21BFE8AFD006D6903 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		0D74B1E21BFE8FB4006D6903 /* YamlDefaultInitializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamlDefaultInitializer.swift; sourceTree = "<group>"; };
+		0D74B1E41BFE9096006D6903 /* YamlHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YamlHandler.swift; sourceTree = "<group>"; };
+		0D74B1E71BFE9B8E006D6903 /* testConfiguration.yaml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = testConfiguration.yaml; sourceTree = "<group>"; };
 		0DB7A7741BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigExtractorTests.swift; sourceTree = "<group>"; };
 		0DB7A8251BF9E9F30069CDD1 /* SchemaTestProject.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = SchemaTestProject.bin; sourceTree = "<group>"; };
-		753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBXProjEditor.swift; sourceTree = "<group>"; };
+		753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PBXProjEditor.swift; path = ../IconBuilder/PBXProjEditor.swift; sourceTree = "<group>"; };
 		759D24981BF3D82E008530A3 /* xcodeproject-inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xcodeproject-inactive.png"; sourceTree = "<group>"; };
 		759D249A1BF3D917008530A3 /* appIconGridScreenshots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIconGridScreenshots.png; sourceTree = "<group>"; };
 		75A86F7C1BF3D79C002AD9A8 /* xcodeproject.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xcodeproject.png; sourceTree = "<group>"; };
@@ -53,15 +96,22 @@
 		75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBuilderTests.swift; sourceTree = "<group>"; };
 		75F871131BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75F8711E1BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigExtractor.swift; sourceTree = "<group>"; };
-		75F8712C1BF2853E00DE4C75 /* DragFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragFileView.swift; sourceTree = "<group>"; };
-		75F8712E1BF34BC800DE4C75 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
-		75F871371BF39D5600DE4C75 /* create.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = create.sh; sourceTree = "<group>"; };
-		75F871391BF3C44700DE4C75 /* IconsCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconsCreator.swift; sourceTree = "<group>"; };
-		75F8713B1BF3CAEA00DE4C75 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectConfigExtractor.swift; path = ../IconBuilder/ProjectConfigExtractor.swift; sourceTree = "<group>"; };
+		75F8712C1BF2853E00DE4C75 /* DragFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragFileView.swift; path = ../IconBuilder/DragFileView.swift; sourceTree = "<group>"; };
+		75F8712E1BF34BC800DE4C75 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = ../IconBuilder/Configuration.swift; sourceTree = "<group>"; };
+		75F871371BF39D5600DE4C75 /* create.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = create.sh; path = ../IconBuilder/create.sh; sourceTree = "<group>"; };
+		75F871391BF3C44700DE4C75 /* IconsCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconsCreator.swift; path = ../IconBuilder/IconsCreator.swift; sourceTree = "<group>"; };
+		75F8713B1BF3CAEA00DE4C75 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Contents.json; path = ../IconBuilder/Contents.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D74B1CD1BFE8AFD006D6903 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75F870F91BF26AA400DE4C75 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -79,6 +129,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D74B1D11BFE8AFD006D6903 /* XZibit */ = {
+			isa = PBXGroup;
+			children = (
+				75F8712E1BF34BC800DE4C75 /* Configuration.swift */,
+				75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */,
+				75F8712C1BF2853E00DE4C75 /* DragFileView.swift */,
+				75F871391BF3C44700DE4C75 /* IconsCreator.swift */,
+				753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */,
+				75F8713B1BF3CAEA00DE4C75 /* Contents.json */,
+				75F871371BF39D5600DE4C75 /* create.sh */,
+				0D74B1D21BFE8AFD006D6903 /* main.swift */,
+				0D74B1E41BFE9096006D6903 /* YamlHandler.swift */,
+			);
+			path = XZibit;
+			sourceTree = "<group>";
+		};
 		0DB7A7761BF9E4190069CDD1 /* ConfigExtractorTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +160,7 @@
 				75F870FE1BF26AA400DE4C75 /* IconBuilder */,
 				75F871101BF26AA400DE4C75 /* IconBuilderTests */,
 				75F8711B1BF26AA400DE4C75 /* IconBuilderUITests */,
+				0D74B1D11BFE8AFD006D6903 /* XZibit */,
 				75F870FD1BF26AA400DE4C75 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +170,7 @@
 			children = (
 				75F870FC1BF26AA400DE4C75 /* IconBuilder.app */,
 				75F8710D1BF26AA400DE4C75 /* IconBuilderTests.xctest */,
+				0D74B1D01BFE8AFD006D6903 /* XZibit */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,13 +180,6 @@
 			children = (
 				75F870FF1BF26AA400DE4C75 /* AppDelegate.swift */,
 				75F871011BF26AA400DE4C75 /* ViewController.swift */,
-				75F8712E1BF34BC800DE4C75 /* Configuration.swift */,
-				75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */,
-				75F8712C1BF2853E00DE4C75 /* DragFileView.swift */,
-				75F871391BF3C44700DE4C75 /* IconsCreator.swift */,
-				753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */,
-				75F8713B1BF3CAEA00DE4C75 /* Contents.json */,
-				75F871371BF39D5600DE4C75 /* create.sh */,
 				75F871031BF26AA400DE4C75 /* Assets.xcassets */,
 				75F871051BF26AA400DE4C75 /* Main.storyboard */,
 				75A86F7C1BF3D79C002AD9A8 /* xcodeproject.png */,
@@ -133,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				75F871111BF26AA400DE4C75 /* IconBuilderTests.swift */,
+				0D74B1E71BFE9B8E006D6903 /* testConfiguration.yaml */,
+				0D74B1E21BFE8FB4006D6903 /* YamlDefaultInitializer.swift */,
 				75F871131BF26AA400DE4C75 /* Info.plist */,
 				0DB7A7761BF9E4190069CDD1 /* ConfigExtractorTests */,
 			);
@@ -150,6 +213,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0D74B1CF1BFE8AFD006D6903 /* XZibit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D74B1D61BFE8AFD006D6903 /* Build configuration list for PBXNativeTarget "XZibit" */;
+			buildPhases = (
+				0D74B1CC1BFE8AFD006D6903 /* Sources */,
+				0D74B1CD1BFE8AFD006D6903 /* Frameworks */,
+				0D74B1CE1BFE8AFD006D6903 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XZibit;
+			productName = XZibit;
+			productReference = 0D74B1D01BFE8AFD006D6903 /* XZibit */;
+			productType = "com.apple.product-type.tool";
+		};
 		75F870FB1BF26AA400DE4C75 /* IconBuilder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75F871211BF26AA400DE4C75 /* Build configuration list for PBXNativeTarget "IconBuilder" */;
@@ -157,7 +237,7 @@
 				75F870F81BF26AA400DE4C75 /* Sources */,
 				75F870F91BF26AA400DE4C75 /* Frameworks */,
 				75F870FA1BF26AA400DE4C75 /* Resources */,
-				75F871321BF3915600DE4C75 /* ShellScript */,
+				0D74B1DD1BFE8B87006D6903 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -196,6 +276,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Andrei Vidrasco";
 				TargetAttributes = {
+					0D74B1CF1BFE8AFD006D6903 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 					75F870FB1BF26AA400DE4C75 = {
 						CreatedOnToolsVersion = 7.1;
 					};
@@ -219,6 +302,7 @@
 			projectRoot = "";
 			targets = (
 				75F870FB1BF26AA400DE4C75 /* IconBuilder */,
+				0D74B1CF1BFE8AFD006D6903 /* XZibit */,
 				75F8710C1BF26AA400DE4C75 /* IconBuilderTests */,
 			);
 		};
@@ -244,28 +328,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DB7A8261BF9E9F30069CDD1 /* SchemaTestProject.bin in Resources */,
+				0D74B1E81BFE9B8E006D6903 /* testConfiguration.yaml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		75F871321BF3915600DE4C75 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
+/* Begin PBXSourcesBuildPhase section */
+		0D74B1CC1BFE8AFD006D6903 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
+				0D74B1D71BFE8B2E006D6903 /* Configuration.swift in Sources */,
+				0D74B1E51BFE9096006D6903 /* YamlHandler.swift in Sources */,
+				0D74B1D91BFE8B2E006D6903 /* IconsCreator.swift in Sources */,
+				0D74B1D31BFE8AFD006D6903 /* main.swift in Sources */,
+				0D74B1D81BFE8B2E006D6903 /* ProjectConfigExtractor.swift in Sources */,
+				0D74B1DA1BFE8B2E006D6903 /* PBXProjEditor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "removeTemp() {\n    convert -page +$move-$move \\\n    $1.png \\\n    -background none \\\n    -flatten \\\n    $2.png\n    rm $1.png\n}\n\n\ncreateTemp() {\n    move=$((185*$6/1024))\n    convert -background transparent \\\n    -undercolor $4 \\\n    -fill $5 \\\n    -font /Library/Fonts/\"$3\".ttf \\\n    -size $6x$6 \\\n    -rotate 45 \\\n    -pointsize $7 \\\n    -gravity North \\\n    label:\"$1\" \\\n    .fileName.png\n    removeTemp .fileName \"$2\" move\n}\n\ncreateFinal() {\n    pointsize=$((150 * $5 / 1024))\n    createTemp \"                            \" .ribbon $2 $3 transparent $5 $pointsize\n    createTemp \"$1\" .labelText $2 transparent $4 $5 $pointsize\n    \n    convert  .ribbon.png .labelText.png \\\n    -gravity center   -composite   ~/Desktop/$1.png\n    rm .labelText.png\n    rm .ribbon.png\n    \n}\n\ncreateFinal Beta Arial red blue 150";
 		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
 		75F870F81BF26AA400DE4C75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -275,6 +357,7 @@
 				75F871001BF26AA400DE4C75 /* AppDelegate.swift in Sources */,
 				75F8712D1BF2853E00DE4C75 /* DragFileView.swift in Sources */,
 				75F8712B1BF2795200DE4C75 /* ProjectConfigExtractor.swift in Sources */,
+				0D74B1E61BFE90D0006D6903 /* YamlHandler.swift in Sources */,
 				753DC1241BF4CE5400DA756C /* PBXProjEditor.swift in Sources */,
 				75F8713A1BF3C44700DE4C75 /* IconsCreator.swift in Sources */,
 			);
@@ -284,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D74B1E31BFE8FB4006D6903 /* YamlDefaultInitializer.swift in Sources */,
 				0DB7A7751BF9E40E0069CDD1 /* ProjectConfigExtractorTests.swift in Sources */,
 				75F871121BF26AA400DE4C75 /* IconBuilderTests.swift in Sources */,
 			);
@@ -311,6 +395,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0D74B1D41BFE8AFD006D6903 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0D74B1D51BFE8AFD006D6903 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		75F8711F1BF26AA400DE4C75 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -444,6 +542,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D74B1D61BFE8AFD006D6903 /* Build configuration list for PBXNativeTarget "XZibit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D74B1D41BFE8AFD006D6903 /* Debug */,
+				0D74B1D51BFE8AFD006D6903 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		75F870F71BF26AA400DE4C75 /* Build configuration list for PBXProject "IconBuilder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
