@@ -112,7 +112,7 @@ class IconsCreator {
             }
             let task = NSTask()
             task.launchPath = "/bin/sh"
-            task.arguments = [createSHPath(), imagepath, config.title, "Arial", config.ribbonColor, config.textColor, resultsPath]
+            task.arguments = [createSHPath(), imagepath, config.title, config.ribbonColor, config.textColor, resultsPath]
             
             task.launch()
             task.waitUntilExit()

@@ -97,7 +97,7 @@
 		75F871131BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75F8711E1BF26AA400DE4C75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectConfigExtractor.swift; path = ../IconBuilder/ProjectConfigExtractor.swift; sourceTree = "<group>"; };
-		75F8712C1BF2853E00DE4C75 /* DragFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DragFileView.swift; path = ../IconBuilder/DragFileView.swift; sourceTree = "<group>"; };
+		75F8712C1BF2853E00DE4C75 /* DragFileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragFileView.swift; sourceTree = "<group>"; };
 		75F8712E1BF34BC800DE4C75 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = ../IconBuilder/Configuration.swift; sourceTree = "<group>"; };
 		75F871371BF39D5600DE4C75 /* create.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = create.sh; path = ../IconBuilder/create.sh; sourceTree = "<group>"; };
 		75F871391BF3C44700DE4C75 /* IconsCreator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconsCreator.swift; path = ../IconBuilder/IconsCreator.swift; sourceTree = "<group>"; };
@@ -134,7 +134,6 @@
 			children = (
 				75F8712E1BF34BC800DE4C75 /* Configuration.swift */,
 				75F8712A1BF2795200DE4C75 /* ProjectConfigExtractor.swift */,
-				75F8712C1BF2853E00DE4C75 /* DragFileView.swift */,
 				75F871391BF3C44700DE4C75 /* IconsCreator.swift */,
 				753DC1231BF4CE5400DA756C /* PBXProjEditor.swift */,
 				75F8713B1BF3CAEA00DE4C75 /* Contents.json */,
@@ -180,6 +179,7 @@
 			children = (
 				75F870FF1BF26AA400DE4C75 /* AppDelegate.swift */,
 				75F871011BF26AA400DE4C75 /* ViewController.swift */,
+				75F8712C1BF2853E00DE4C75 /* DragFileView.swift */,
 				75F871031BF26AA400DE4C75 /* Assets.xcassets */,
 				75F871051BF26AA400DE4C75 /* Main.storyboard */,
 				75A86F7C1BF3D79C002AD9A8 /* xcodeproject.png */,
@@ -549,6 +549,7 @@
 				0D74B1D51BFE8AFD006D6903 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		75F870F71BF26AA400DE4C75 /* Build configuration list for PBXProject "IconBuilder" */ = {
 			isa = XCConfigurationList;
